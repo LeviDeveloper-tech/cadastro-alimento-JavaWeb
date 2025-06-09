@@ -1,4 +1,4 @@
-package ap3.cadastro.alimento.dao;
+package ap3.cadastro.alimento.model.dao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,8 +6,8 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
+import ap3.cadastro.alimento.model.entity.Alimento;
 import ap3.cadastro.alimento.util.JPAUtil;
-import ap3.cadastro.alimentos.entity.Alimento;
 
 public class AlimentoDAO {
 	

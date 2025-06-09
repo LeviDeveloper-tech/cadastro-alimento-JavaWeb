@@ -5,7 +5,7 @@ import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 
-import ap3.cadastro.alimentos.entity.Alimento;
+import ap3.cadastro.alimento.model.entity.Alimento;
 
 @ManagedBean
 public class AlimentoBean {

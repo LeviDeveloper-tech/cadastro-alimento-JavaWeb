@@ -1,4 +1,4 @@
-package ap3.cadastro.alimentos.entity;
+package ap3.cadastro.alimento.model.entity;
 
 import java.util.Date;
 
