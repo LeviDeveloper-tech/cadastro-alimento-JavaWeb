@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+	<h:head>
+		<title>Cadastro de Alimentos</title>
+	</h:head>
+	<h:body>
+	<p:fieldset legend="Cadastro de alimentos">	
+		<h:form>
+			<p:panelGrid columns="2" >
+				<p:outputLabel for="nomeAlimento" value="Digite o nome do alimento: "/>
+				<p:inputText id="nomeAlimento" value="#{alimentoBean.alimento.nomeAlimento}" required="true" />
+				
+				<p:outputLabel for="tipoAlimento" value="Escolha o tipo do alimento:  "/>
+				<p:selectOneMenu id="tipoAlimento" value="#{alimentoBean.alimento.tipoAlimento}">
+					<f:selectItem itemLabel="Verdura" itemValue="Verdura"/>
+					<f:selectItem itemLabel="Fruta" itemValue="Fruta"/>
+					<f:selectItem itemLabel="Laticínio" itemValue="Laticínio"/>
+					<f:selectItem itemLabel="Insdustrializado" itemValue="Insdustrializado"/>
+				</p:selectOneMenu>
+				
+				<p:outputLabel for="dataAlimento" value="Selecione a data de validade"/>
+				<p:calendar id="dataAlimento" value="#{alimentoBean.alimento.dataValidade}" required="true" />
+	
+				<p:commandButton value="Salvar" action="#{alimentoBean.salvar()}" update="@form"/>
+				<p:link value="Listagem" outcome="listagem"/>
+				
+			</p:panelGrid>
+			<p:messages/> 
+		</h:form>
+	</p:fieldset>
+	</h:body>
+</html>

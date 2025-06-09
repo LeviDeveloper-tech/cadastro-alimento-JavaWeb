@@ -24,7 +24,27 @@ public class AlimentoBean {
 			FacesContext.getCurrentInstance().addMessage(null, mensagem);
 			alimento = new Alimento();
 		}
-
+		
+		public void remover(Alimento alimento) {
+			AlimentoDAO.remover(alimento);
+			listaAlimentos = null;
+			FacesMessage mensagem = new FacesMessage(FacesMessage.SEVERITY_INFO, "Sucesso!", "O alimento foi removido.");
+			FacesContext.getCurrentInstance().addMessage(null, mensagem);
+			
+		}
+		
+		public void infoAlimento(Alimento alimento) {
+			String informacoes ="<br/>" + "<br/>" +
+					"ID do Alimento: " + alimento.getIdAlimento() + "<br/>" +
+					"Nome do Alimento: " + alimento.getNomeAlimento() + "<br/>" +
+					"Tipo do Alimento: " + alimento.getTipoAlimento() + "<br/>" +
+					"Data de válidade: " + alimento.getDataValidade();
+			
+			FacesMessage mensagem = new FacesMessage(FacesMessage.SEVERITY_INFO, "Informações do alimento", informacoes);
+			FacesContext.getCurrentInstance().addMessage(null, mensagem);
+		}
+			
+		
 		public Alimento getAlimento() {
 			return alimento;
 		}

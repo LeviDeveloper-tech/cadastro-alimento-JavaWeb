@@ -7,18 +7,21 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "tbl_cadastro_alimento" )
 public class Alimento {	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_alimento")
 	private Integer idAlimento;
-	@Column(length = 15, nullable = false)
+	@Column(name="nome_alimento", length = 255, nullable = false)
 	private String nomeAlimento;
-	@Column(nullable = false)
+	@Column(name="data_validade", nullable = false)
 	private Date dataValidade;
-	@Column(nullable = false)
-	private String tipoAlimento; //verdura, fruta, laticínio. 
+	@Column(name="tipo_alimento", nullable = false)
+	private String tipoAlimento; 
 
 	
 	public Integer getIdAlimento() {

@@ -24,7 +24,7 @@ public class AlimentoDAO {
 		em.getTransaction().begin();
 		alimento = em.find(Alimento.class, alimento.getIdAlimento());
 		em.remove(alimento);
-		em.getTransaction().commit();
+		em.getTransaction().commit();	
 		em.close();
 	}
 	
