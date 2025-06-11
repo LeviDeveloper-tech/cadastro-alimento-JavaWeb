@@ -16,12 +16,12 @@
 				<p:inputText id="nomeAlimento" value="#{alimentoBean.alimento.nomeAlimento}" required="true" />
 				
 				<p:outputLabel for="tipoAlimento" value="Escolha o tipo do alimento:  "/>
-				<p:selectOneMenu id="tipoAlimento" value="#{alimentoBean.alimento.tipoAlimento}">
+				<p:selectOneRadio  id="tipoAlimento" value="#{alimentoBean.alimento.tipoAlimento}">
 					<f:selectItem itemLabel="Verdura" itemValue="Verdura"/>
 					<f:selectItem itemLabel="Fruta" itemValue="Fruta"/>
 					<f:selectItem itemLabel="Laticínio" itemValue="Laticínio"/>
 					<f:selectItem itemLabel="Insdustrializado" itemValue="Insdustrializado"/>
-				</p:selectOneMenu>
+				</p:selectOneRadio>
 				
 				<p:outputLabel for="dataAlimento" value="Selecione a data de validade"/>
 				<p:calendar id="dataAlimento" value="#{alimentoBean.alimento.dataValidade}" required="true" />

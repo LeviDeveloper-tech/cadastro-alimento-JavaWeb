@@ -32,11 +32,11 @@
 					</p:column>
 				
 					<p:column headerText="Remover alimento">
-						<p:commandButton value="Remover" action="#{alimentoBean.remover(alm)}" update="form"/>
+						<p:commandButton value="Remover" icon="pi pi-times" styleClass="rounded-button ui-button-danger" action="#{alimentoBean.remover(alm)}" update="form"/>
 					</p:column>
 					
 					<p:column headerText="Informações do alimento">
-						<p:commandButton value="Info" action="#{alimentoBean.infoAlimento(alm)}" update="form"/>
+						<p:commandButton value="Info" icon="pi pi-search" styleClass="rounded-button ui-button-success" onclick="" action="#{alimentoBean.infoAlimento(alm)}" update="form"/>
 					</p:column>
 				
 				</p:dataTable>
